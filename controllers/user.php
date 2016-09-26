@@ -7,9 +7,7 @@
     }
 
 
-    public function index()
-    {
-      //print_r($this->view->userList);
+    public function index() {
         $this->view->render('user/index');
     }
 

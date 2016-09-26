@@ -3,12 +3,14 @@ class Login_Model extends Model {
 
     public function __construct() {
        parent::__construct();
-       $this->db = new Database();
-
+            $this->db = new Database();
+            $this->user = $user;
     }
-    public function tst() {
+
+    public function tst($user) {
         $stm = $this->db->prepare("SELECT * FROM `users` WHERE 1");
-        $stm->execute();
+        $stm->execute($user);
+        return $stm;
     }
 
     public function run() {

@@ -2,7 +2,8 @@
   class View {
    function __construct() {
       //echo 'This is the View <br />';
-      // $this->view = new View();
+//      $this->view = new View();
+
    }
       public function render($name, $noInclude = false) {
         if($noInclude == true)

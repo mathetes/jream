@@ -2,14 +2,10 @@
 class User_Model extends Model {
 
     public function __construct() {
-       parent::__construct();
-       echo "User";
+        parent::__construct();
+            $this->user = $user;
     }
-    public function tst() {
-        $stm = $this->db->prepare("SELECT * FROM `users` WHERE 1");
-        $stm->execute();
-        print_r($stm);
-    }
+
 
     public function run() {
         print_r($this->db);
